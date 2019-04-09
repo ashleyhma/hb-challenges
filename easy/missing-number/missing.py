@@ -11,16 +11,26 @@ def missing_number(nums, max_num):
     8
     
     """
-    sum = 0
-    for i in range(max_num+1):
-        sum += i 
 
-    array_sum = 0
-    for num in nums:
-        array_sum += num
+    #O(n)
+    # sum = 0
+    # for i in range(max_num+1):
+    #     sum += i 
 
-    return sum - array_sum
+    # array_sum = 0
+    # for num in nums:
+    #     array_sum += num
 
+    # return sum - array_sum
+
+    #############################
+    num_lst = set(nums)
+
+    for i in range(1, max_num+1):
+        if i not in num_lst:
+            return i
+    
+    
 
 
 
