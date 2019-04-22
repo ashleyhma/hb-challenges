@@ -28,18 +28,25 @@ For example:
 def split(astring, splitter):
     """Split a string by splitter and return list of splits."""
 
-    split_words = [] 
+    split_words = []
 
-    if splitter not in astring:
-        split_words.append(astring)
-    
     for idx, ch in enumerate(astring):
-        if ch == splitter:
-            start = 0
-            split_words.append(astring[start+1:idx])
-            start = idx 
+        new_idx = astring.find(splitter)
+        split_words.append(astring[])
+
+
+    # split_words = [] 
+
+    # if splitter not in astring:
+    #     split_words.append(astring)
     
-    return split_words
+    # for idx, ch in enumerate(astring):
+    #     if ch == splitter:
+    #         start = 0
+    #         split_words.append(astring[start+1:idx])
+    #         start = idx 
+    
+    # return split_words
 
 
 if __name__ == '__main__':
