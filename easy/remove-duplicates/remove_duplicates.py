@@ -16,9 +16,16 @@ For example::
 
 def remove_duplicates(items):
     """Remove duplicates in the list items and return that list."""
-    
-    for item in items:
-        if 
+    check = set()
+
+    for i in range(len(items)-1, -1, -1):
+        if items[i] not in check:
+            check.add(items[i])
+        else:    
+            del items[i]
+            
+   
+    return items
 
 if __name__ == '__main__':
     import doctest
